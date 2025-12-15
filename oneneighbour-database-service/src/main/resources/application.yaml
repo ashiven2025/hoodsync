@@ -1,0 +1,14 @@
+# file: `src/main/resources/application.yaml`
+spring:
+  application:
+    name: oneneighbour-database-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/oneneighbour
+    username: ${DB_USERNAME:your_username}
+    password: ${DB_PASSWORD:your_password}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 30000
